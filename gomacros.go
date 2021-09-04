@@ -1,12 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
+	"pgs.com/gomacros/board"
+)
 
-func initialize(){
+func initialize() {
 	fmt.Println("Hello World")
+	board.InitializeBoard()
 }
 
-func main(){
-    initialize()
+func main() {
+	initialize()
 }
