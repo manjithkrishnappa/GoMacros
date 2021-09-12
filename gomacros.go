@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"pgs.com/gomacros/board"
 	"pgs.com/gomacros/configuration"
@@ -9,8 +10,10 @@ import (
 
 func initialize() {
 	fmt.Println("Hello World")
+	if !configuration.InitializeConfig() {
+		log.Fatalln("Could not initalize configuration")
+	}
 	board.InitializeBoard()
-	configuration.InitializeConfig()
 }
 
 func main() {
